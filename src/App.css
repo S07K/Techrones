@@ -1,38 +1,322 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+
+.header{
+  position: fixed;
+  width: 100%;
+  background: white;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(18, 18, 18);
+  box-shadow: 8px 8px 16px rgba(18, 18, 18, 0.3);
+}
+.scrolled{
+  background-color: white;
+  box-shadow: 0 0 8px rgba(18, 18, 18, 0.5);
+}
+.brand{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.links{
+  padding: 0px 50px;
+}
+.links ul{
+  margin: 14px 0;
+  list-style-type: none;
+}
+.link-list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.link-list a, .a{
+  text-decoration: none;
+  padding-right: 30px;
+  font-size: 14px;
+  color: rgb(105, 105, 105);
+  transition: .3s ease ;
+}
+.link-list a:hover{
+  color: rgba(18, 18, 18);
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.welcome{
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+#myVideo {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.layer{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+  padding-top: 200px;
+  background: linear-gradient(45deg, #121212, rgba(18, 18, 18, 0.808), rgba(18, 18, 18, 0.3));
+}
+.layer h1{
+  text-align: left;
+  margin-bottom: 0;
+}
+.p1{
+  width: 20%;
+  font-size: 24px;
+  margin-bottom: 0;
+}
+.p2{
+  width: 60%;
+  font-size: 16px;
+  color: rgb(134, 134, 134);
+}
+.p1, .p2{
+  text-align: left;
+}
+
+.product{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 90% 10%;
+  padding: 50px 0;
+  margin-bottom: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+.dimage img{
+  width: 300px;
+  height: auto;
+}
+.dinfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px 50px 0;
+  text-align: center;
+}
+.dinfo h1{
+  color: #121212;
+}
+.dinfo p{
+  font-size: 14px;
+  color: rgba(18, 18, 18, 0.9);
+}
+.btn{
+  grid-column: 1/3;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.btn a{
+  width: 100px;
+  text-decoration: none;
+  background-color: white;
+  color: #121212;
+  padding: 8px;
+  font-size: 11px;
+  border: 1px solid #121212;
+  border-radius: 50px;
+  transition: .3s ease;
+}
+.btn a:hover{
+  color: white;
+  background-color: #121212;
+  border-radius: 50px;
+}
+
+.future{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 70vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.quote_img, .quote{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote_img{
+  font-family: 'Secular One', sans-serif;
+  background: #121212;
+}
+#big{
+  height: 200px;
+  font-size: 200px;
+  vertical-align: middle;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.quote{
+  background: url(https://miro.medium.com/max/1000/1*ruJkM8C94yaOSCmDFHJtsg.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.quote div{
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(3, 3, 3, 0.835), rgba(3, 3, 3, 0.75));
+}
+.quote div b{
+  text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.footer{
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 80px;
+  background: #121212;
+}
+.footer-brand{
+  padding-left: 0;
+  font-size: 32px;
+  color: white;
+}
+.footer-links{
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 2/3;
+}
+.footer-links p{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+.footer-links ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+.footer-links ul li a{
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1px; 
+  text-transform: capitalize;
+  color: rgb(105, 105, 105);
+}
+.footer-links ul li a:hover{
+  color: white;
+}
+.about-links, .connect, .other-links{
+  text-align: left;
+  padding-left: 50px;
+}
+.credits{
+  padding: 10px 80px;
+  font-size: 10px;
+  text-align: left;
+  color: rgb(105, 105, 105);
+  background: #121212;
+}
+
+
+.forms{
+  font-family: 'Poppins', sans-serif;
+}
+.forms> p{
+  font-size: 40px;
+  text-align: left;
+  font-weight: 600;
+  padding: 40px 80px 20px 80px;
+  margin: 0px ;
+} 
+form{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+}
+.first-half, .second-half{
+  display: flex;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 40px 80px;
+}
+.first-half> div, .second-half> div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.first-half label, .second-half label{
+  padding-bottom: 4px;
+  font-weight: bold;
+}
+.first-half input, textarea{
+  border: 1px solid rgba(18, 18, 18, 0.3);
+  border-radius: 4px;
+  height: 20px;
+  padding: 8px;
+}
+.first-half input:hover, textarea:hover{
+  border: 1px solid #121212;
+}
+.first-half input:focus, textarea:focus{
+  border: 1px solid white;
+  outline: 1px solid #121212;
+  box-shadow: 0px 0px 8px rgba(18, 18, 18, 0.3);
+}
+
+textarea{
+  height: 200px;
+}
+
+.second-half button {
+  font-family: 'Poppins', sans-serif;
+  border-radius: 4px;
+  border: 1px solid #121212;
+  background: #121212;
+  color: white;
+  padding: 10px;
+}
+.second-half button:hover{
+  background: rgb(65, 223, 65);
+  border: 1px solid rgb(65, 223, 65);
+  cursor: pointer;
+}
+
+.about{
+  font-family: 'Poppins', sans-serif;
+  padding: 80px;
+  
+}
+.about h1{
+  font-weight: bolder;
+  font-family: 'Secular One', sans-serif;
+}
+.a:hover {
+  cursor: pointer;
+}
+#content{
+  font-family:'Gill Sans', 'Trebuchet MS', sans-serif;
+  text-align: justify;
 }
