@@ -134,6 +134,7 @@
 .btn a{
   width: 100px;
   text-decoration: none;
+  text-align: center;
   background-color: white;
   color: #121212;
   padding: 8px;
