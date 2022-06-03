@@ -7,9 +7,8 @@ function Header() {
       <div className="brand">Tecrones</div>
       <div className="links">
           <ul className="link-list">
-              <li><Link to="/">Home</Link></li>                    
               <li><Link to="/about">About</Link></li>                    
-              <li><Link to="/contact">Contact Us</Link></li>                    
+              <li><Link to="/signin">Sign In</Link></li>                                      
           </ul>
       </div>
     </div>
