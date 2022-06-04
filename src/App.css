@@ -9,16 +9,13 @@
   width: 100%;
   background: #121212;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 70%;
   font-family: 'Poppins', sans-serif;
   color: #fff;
   box-shadow: 8px 8px 16px rgba(18, 18, 18, 0.3);
   backdrop-filter: blur(10px);
 }
-.scrolled{
-  background-color: white;
-  box-shadow: 0 0 8px rgba(18, 18, 18, 0.5);
-}
+
 .brand{
   display: flex;
   align-items: center;
@@ -26,6 +23,11 @@
   padding-left: 80px;
   font-size: 24px;
   font-weight: bolder;
+}
+.brand a{
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff;
 }
 .links{
   padding: 0px 50px;
@@ -43,7 +45,7 @@
   text-decoration: none;
   padding-right: 30px;
   font-size: 12px;
-  color: rgb(105, 105, 105);
+  color: rgb(177, 177, 177);
   transition: .3s ease ;
 }
 .link-list a:hover{
@@ -226,7 +228,7 @@
   font-size: 11px;
   letter-spacing: 1px; 
   text-transform: capitalize;
-  color: rgb(105, 105, 105);
+  color: rgb(177, 177, 177);
 }
 .footer-links ul li a:hover{
   color: white;
@@ -295,7 +297,7 @@ textarea{
   height: 200px;
 }
 
-.second-half button {
+.second-half button , .submit button{
   font-family: 'Poppins', sans-serif;
   border-radius: 4px;
   border: 1px solid #121212;
@@ -303,7 +305,7 @@ textarea{
   color: white;
   padding: 10px;
 }
-.second-half button:hover{
+.second-half button:hover, .submit button:hover{
   background: rgb(65, 223, 65);
   border: 1px solid rgb(65, 223, 65);
   cursor: pointer;

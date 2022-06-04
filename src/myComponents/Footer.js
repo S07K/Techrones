@@ -9,10 +9,10 @@ function Footer() {
                 <div className="about-links">
                     <p>About</p>
                     <ul>
-                        <li><a href="_">When</a></li>
-                        <li><a href="_">Why</a></li>
-                        <li><a href="_">How</a></li>
-                        <li><a href="_">Goals</a></li>
+                        <li><a href="/about#when">When</a></li>
+                        <li><a href="/about#why">Why</a></li>
+                        <li><a href="/about#how">How</a></li>
+                        <li><a href="/about#goals">Goals</a></li>
                     </ul>
                 </div>
                 <div className="connect">
