@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Register extends Component {
     constructor(props) {
@@ -6,9 +7,9 @@ export default class Register extends Component {
 
         this.state = {
             email: '',
-            phone: '',
             username: '',
             password: '',
+            confirmPassword: '',
         }
     }
 
@@ -24,56 +25,81 @@ export default class Register extends Component {
         })
     }
 
-    handlephoneChange = event => {
-        this.setState({
-            phone: event.target.value
-        })
-    }
-
     handlePasswordChange = (event) => {
         this.setState({
             password: event.target.value
         })
     }
 
+    handleConfirmPasswordChange = (event) => {
+        this.setState({
+            confirmPassword: event.target.value
+        })
+    }
+
     handleSubmit = event => {
         alert(`Name : ${this.state.username} 
-Email: ${this.state.email} 
-Phone: ${this.state.phone}`)
+Email/Phone: ${this.state.email} `)
     }
 
     render() {
-        const {username, password, email, phone} = this.state
+        const {username, email, password, confirmPassword} = this.state
         const style = {
-            paddingTop: "60px"
+            fontSize: '40px',
+            textAlign: 'left',
+            fontWeight: '600',
+            padding: '80px 80px 10px 80px',
+            margin: '0',
+            secondHalf: {
+                gridColumn: "2/3",
+                gridRow: "1/3",
+                background: 'url(https://images.unsplash.com/photo-1539213465191-6046fe072ade?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)',
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+            },
+            anchor: {
+                color: 'rgb(0 169 244)',
+                fontSize: '11px',
+            },
+            pMargin: {
+                margin: '2px 0',
+                textAlign: 'right',
+            }
         }
         return (
             <div className='forms'>
-                <p style={style}>Register</p>
                 <form onSubmit={this.handleSubmit}>
+                <p style={style}>Register</p>
+                <div className='second-half' style={style.secondHalf}></div>
+
                     <div className='first-half'>
                         <div>
-                            <label>Name</label>
+                            <label>Name*</label>
                             <input type='text' value={username} onChange={this.handleUsernameChange} />
                         </div>
                         <div>
-                            <label>Email*</label>
-                            <input type='email' value ={email} onChange={this.handleEmailChange}/>
+                            <label>Email/Mobile*</label>
+                            <input type='email/tel' value ={email} onChange={this.handleEmailChange}/>
                         </div>
                         <div>
-                            <label>Password*</label>
+                            <label>New Password*</label>
                             <input type='password' value={password} onChange={this.handlePasswordChange} />
+                        </div>
+                        <div>
+                            <label>Confirm Password*</label>
+                            <input type='password' value={confirmPassword} onChange={this.handleConfirmPasswordChange} />
                         </div>
                         <div className='submit'>
                             <button type='submit'>Submit</button>
                         </div>
                         <div>
-                            <label>Mobile</label>
-                            <input type='tel' pattern="[0-9]{3}[0-9]{4}[0-9]{3}" value={phone} onChange={this.handlephoneChange} />
+                            <p style={style.pMargin}>
+                                <Link to ='/signin' style={style.anchor}>
+                                    Already have account?
+                                </Link>
+                            </p>
                         </div>
-                    </div>
-                    <div className='second-half'>
-                        
                     </div>
                 </form>
             </div>

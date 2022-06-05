@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+// import { textAlign } from '@mui/system';
+import React, { Component } from 'react';
+import  { Link } from 'react-router-dom';
 
 export default class SignIn extends Component {
     constructor(props) {
@@ -7,8 +9,6 @@ export default class SignIn extends Component {
         this.state = {
             username: '',
             password: '',
-            // email: '',
-            // phone: ''
         }
     }
 
@@ -17,18 +17,6 @@ export default class SignIn extends Component {
             username: event.target.value
         })
     }
-
-    // handleEmailChange = event => {
-    //     this.setState({
-    //         email: event.target.value
-    //     })
-    // }
-
-    // handlephoneChange = event => {
-    //     this.setState({
-    //         phone: event.target.value
-    //     })
-    // }
 
     handlePasswordChange = (event) => {
         this.setState({
@@ -44,7 +32,6 @@ Password: ${this.state.password}`)
     render() {
         const {username, password} = this.state
         const style = {
-            paddingTop: '60px',
             fontSize: '40px',
             textAlign: 'left',
             fontWeight: '600',
@@ -52,12 +39,18 @@ Password: ${this.state.password}`)
             margin: '0',
             secondHalf: {
                 gridRow: "1/3",
-                // padding: '0',
                 background: 'url(https://images.unsplash.com/photo-1504890001746-a9a68eda46e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=787&q=80)',
-                backgroundPosition: 'center'
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
             },
             anchor: {
-                color: 'rgb(0 169 244)'
+                color: 'rgb(0 169 244)',
+                fontSize: '11px',
+            },
+            pMargin: {
+                margin: '2px 0',
+                textAlign: 'right',
             }
         }
         return (
@@ -71,10 +64,6 @@ Password: ${this.state.password}`)
                             <label>Username</label>
                             <input type='text' placeholder='@Semuel' value={username} onChange={this.handleUsernameChange} />
                         </div>
-                        {/* <div>
-                            <label>Email</label>
-                            <input type='email' value ={email} onChange={this.handleEmailChange}/>
-                        </div> */}
                         <div>
                             <label>Password*</label>
                             <input type='password' value={password} onChange={this.handlePasswordChange} />
@@ -83,12 +72,17 @@ Password: ${this.state.password}`)
                             <button type='submit'>Submit</button>
                         </div>
                         <div>
-                            <a href='/' style={style.anchor}>New user?</a>
+                            <p style={style.pMargin}>
+                                <Link to ='/register' style={style.anchor}>
+                                    New user?
+                                </Link>
+                            </p>
+                            <p style={style.pMargin}>
+                                <Link to ='/' style={style.anchor}>
+                                    forgot password?
+                                </Link>
+                            </p>
                         </div>
-                        {/* <div>
-                            <label>Mobile</label>
-                            <input type='tel' pattern="[0-9]{3}[0-9]{4}[0-9]{3}" value={phone} onChange={this.handlephoneChange} />
-                        </div> */}
                     </div>
                     
                 </form>

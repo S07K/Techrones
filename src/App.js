@@ -8,6 +8,7 @@ import Form from './myComponents/Form';
 import Footer from './myComponents/Footer';
 import About from './myComponents/About';
 import SignIn from './myComponents/SignIn';
+import Register from './myComponents/Register';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         </>} />
         <Route path='/about' element={<About />} />
         <Route path='/signin' element={<SignIn />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
       <Footer />
     </Router>

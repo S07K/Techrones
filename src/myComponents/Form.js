@@ -55,7 +55,7 @@ Phone: ${this.state.phone}`)
                         </div>
                         <div>
                             <label>Email</label>
-                            <input type='email' value ={email} onChange={this.handleEmailChange}/>
+                            <input type='email' value ={email} placeholder='@email.com' onChange={this.handleEmailChange}/>
                         </div>
                         <div>
                             <label>Mobile</label>
@@ -64,8 +64,8 @@ Phone: ${this.state.phone}`)
                     </div>
                     <div className='second-half'>
                         <div>
-                            <label>Comments</label>
-                            <textarea value={comments} onChange={this.handleCommentsChange} />
+                            <label>Message</label>
+                            <textarea value={comments} placeholder='write your message here..' onChange={this.handleCommentsChange} />
                         </div>
                         <div>
                             <button type='submit'>Submit</button>
