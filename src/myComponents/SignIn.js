@@ -61,7 +61,7 @@ Password: ${this.state.password}`)
 
                     <div className='first-half'>
                         <div>
-                            <label>Username</label>
+                            <label>Username*</label>
                             <input type='text' placeholder='@Semuel' value={username} onChange={this.handleUsernameChange} />
                         </div>
                         <div>

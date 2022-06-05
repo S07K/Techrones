@@ -5,14 +5,10 @@ import { Link } from 'react-router-dom';
 function Header() {
   const btnStyle = {
     width: "140px !important",
-    border: '1px solid #fff',
+    border: '2px solid #fff',
     color: "#fff",
-    borderRadius: '4px',
+    borderRadius: '8px',
     padding: '6px 20px',
-    "&:hover": {
-      backgroundColor: '#fff',
-      color: '#000'
-    }
   }
   return (
     <div className="header">
@@ -21,7 +17,7 @@ function Header() {
           <ul className="link-list">
               <li><Link to="/about">About</Link></li>                    
               <li>
-                <Link to="/signin" style={btnStyle}>
+                <Link to="/signin" style={btnStyle} className='hover-btn'>
                   Sign In
                 </Link>
               </li>                                      

@@ -39,7 +39,8 @@ export default class Register extends Component {
 
     handleSubmit = event => {
         alert(`Name : ${this.state.username} 
-Email/Phone: ${this.state.email} `)
+Email/Phone: ${this.state.email} 
+Password: ${this.state.password}`)
     }
 
     render() {
