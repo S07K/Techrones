@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 
-export default class SignIn extends Component {
+export default class Register extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
+            email: '',
+            phone: '',
             username: '',
             password: '',
-            email: '',
-            phone: ''
         }
     }
 
@@ -45,36 +45,20 @@ Phone: ${this.state.phone}`)
     render() {
         const {username, password, email, phone} = this.state
         const style = {
-            paddingTop: '60px',
-            fontSize: '40px',
-            textAlign: 'left',
-            fontWeight: '600',
-            padding: '80px 80px 10px 80px',
-            margin: '0',
-            secondHalf: {
-                gridRow: "1/3",
-                // padding: '0',
-                background: 'url(https://images.unsplash.com/photo-1504890001746-a9a68eda46e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=787&q=80)',
-                backgroundPosition: 'center'
-            },
-            anchor: {
-                color: 'rgb(0 169 244)'
-            }
+            paddingTop: "60px"
         }
         return (
             <div className='forms'>
+                <p style={style}>Register</p>
                 <form onSubmit={this.handleSubmit}>
-                <div style={style.secondHalf} className='second-half'></div>
-                <p style={style}>Sign In</p>
-
                     <div className='first-half'>
-                        {/* <div>
+                        <div>
                             <label>Name</label>
                             <input type='text' value={username} onChange={this.handleUsernameChange} />
-                        </div> */}
+                        </div>
                         <div>
-                            <label>Username*</label>
-                            <input type='email' placeholder='email/phone' value ={email} onChange={this.handleEmailChange}/>
+                            <label>Email*</label>
+                            <input type='email' value ={email} onChange={this.handleEmailChange}/>
                         </div>
                         <div>
                             <label>Password*</label>
@@ -84,14 +68,13 @@ Phone: ${this.state.phone}`)
                             <button type='submit'>Submit</button>
                         </div>
                         <div>
-                            <a href='' style={style.anchor}>New user?</a>
-                        </div>
-                        {/* <div>
                             <label>Mobile</label>
                             <input type='tel' pattern="[0-9]{3}[0-9]{4}[0-9]{3}" value={phone} onChange={this.handlephoneChange} />
-                        </div> */}
+                        </div>
                     </div>
-                    
+                    <div className='second-half'>
+                        
+                    </div>
                 </form>
             </div>
         )
