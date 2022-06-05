@@ -7,8 +7,8 @@ export default class SignIn extends Component {
         this.state = {
             username: '',
             password: '',
-            email: '',
-            phone: ''
+            // email: '',
+            // phone: ''
         }
     }
 
@@ -18,17 +18,17 @@ export default class SignIn extends Component {
         })
     }
 
-    handleEmailChange = event => {
-        this.setState({
-            email: event.target.value
-        })
-    }
+    // handleEmailChange = event => {
+    //     this.setState({
+    //         email: event.target.value
+    //     })
+    // }
 
-    handlephoneChange = event => {
-        this.setState({
-            phone: event.target.value
-        })
-    }
+    // handlephoneChange = event => {
+    //     this.setState({
+    //         phone: event.target.value
+    //     })
+    // }
 
     handlePasswordChange = (event) => {
         this.setState({
@@ -37,13 +37,12 @@ export default class SignIn extends Component {
     }
 
     handleSubmit = event => {
-        alert(`Name : ${this.state.username} 
-Email: ${this.state.email} 
-Phone: ${this.state.phone}`)
+        alert(`username : ${this.state.username} 
+Password: ${this.state.password}`)
     }
 
     render() {
-        const {username, password, email, phone} = this.state
+        const {username, password} = this.state
         const style = {
             paddingTop: '60px',
             fontSize: '40px',
@@ -68,14 +67,14 @@ Phone: ${this.state.phone}`)
                 <p style={style}>Sign In</p>
 
                     <div className='first-half'>
-                        {/* <div>
-                            <label>Name</label>
-                            <input type='text' value={username} onChange={this.handleUsernameChange} />
-                        </div> */}
                         <div>
-                            <label>Username*</label>
-                            <input type='email' placeholder='email/phone' value ={email} onChange={this.handleEmailChange}/>
+                            <label>Username</label>
+                            <input type='text' placeholder='@Semuel' value={username} onChange={this.handleUsernameChange} />
                         </div>
+                        {/* <div>
+                            <label>Email</label>
+                            <input type='email' value ={email} onChange={this.handleEmailChange}/>
+                        </div> */}
                         <div>
                             <label>Password*</label>
                             <input type='password' value={password} onChange={this.handlePasswordChange} />
@@ -84,7 +83,7 @@ Phone: ${this.state.phone}`)
                             <button type='submit'>Submit</button>
                         </div>
                         <div>
-                            <a href='' style={style.anchor}>New user?</a>
+                            <a href='/' style={style.anchor}>New user?</a>
                         </div>
                         {/* <div>
                             <label>Mobile</label>
