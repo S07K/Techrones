@@ -240,8 +240,8 @@
 .credits{
   padding: 10px 80px;
   font-size: 10px;
-  text-align: left;
-  color: rgb(105, 105, 105);
+  text-align: right;
+  color: rgb(117, 117, 117);
   background: #121212;
 }
 
@@ -311,24 +311,34 @@ textarea{
   cursor: pointer;
 }
 
-.about{
+.about, #sub-content{
   font-family: 'Poppins', sans-serif;
   padding: 80px;
   
 }
-.about h1{
+.about h1, #sub-content h1{
   font-weight: bolder;
   font-family: 'Secular One', sans-serif;
 }
-.about-list {
+.about-list{
   font-size: 16px;
   font-weight: bold;
-  padding-top: 50px;
+  transition: .3s ease; 
+}
+.a:hover{
+  color: #121212;
 }
 #content{
   font-family:'Gill Sans', 'Trebuchet MS', sans-serif;
   font-weight: normal;
   text-align: justify;
   font-size: 12px;
+}
+#sub-content{
+  font-family:'Gill Sans', 'Trebuchet MS', sans-serif;
+  font-weight: normal;
+  text-align: justify;
+  font-size: 12px;
+  padding: 80px;
 }
 

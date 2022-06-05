@@ -16,7 +16,7 @@ function Header() {
   }
   return (
     <div className="header">
-      <div className="brand"><Link to="/">Techrone</Link></div>
+      <div className="brand"><Link to="/">Techrones</Link></div>
       <div className="links">
           <ul className="link-list">
               <li><Link to="/about">About</Link></li>                    

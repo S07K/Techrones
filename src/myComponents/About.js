@@ -1,9 +1,6 @@
 import React from 'react'
 import AboutMain from './aboutComponents/AboutMain';
-import When from './aboutComponents/When';
-import Why from './aboutComponents/Why';
-import How from './aboutComponents/How';
-import Goals from './aboutComponents/Goals';
+import { Link } from 'react-router-dom';
 
 function About() {
 
@@ -12,16 +9,15 @@ function About() {
             <h1>Techrones</h1>
             <div className='links' style={{padding: '0px'}}>
                 <ul className='about-list' style={{justifyContent:'flex-start', padding: '0px', margin:'0'}}>
-                    <li className="about-list">About</li>
+                    <li>About</li>
                     <div id='content'><AboutMain /></div>
-                    <li className="about-list" id='when'>When</li>
-                    <div id='content'><When /></div>
-                    <li className="about-list" id='why'>Why</li>
-                    <div id='content'><Why /></div>
-                    <li className="about-list" id='how'>How</li>
-                    <div id='content'><How /></div>
-                    <li className="about-list" id='goals'>Goals</li>
-                    <div id='content'><Goals /></div>
+                    <div>
+                        <span><Link to='/about/when' className='a'>When</Link></span>
+                        <span><Link to='/about/why' className='a'>Why</Link></span>
+                        <span><Link to='/about/how' className='a'>How</Link></span>
+                        <span><Link to='/about/goals' className='a'>Goals</Link></span>
+                    </div>
+                    
                 </ul>
             </div>
         </div>
