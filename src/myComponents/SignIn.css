@@ -1,0 +1,13 @@
+@media screen and (max-width: 800px){
+    form{
+        grid-template-rows: auto auto auto;
+    }
+    .second-half{
+        padding-top: 80px;
+        height: 20vh;
+        grid-column: 1/2;
+    }
+    form> p{
+        padding: 40px !important;
+    }
+}

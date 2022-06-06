@@ -1,4 +1,5 @@
 import './App.css';
+import './AppResponsive.css';
 import React from 'react';
 import Header from './myComponents/Header';
 import Welcome from './myComponents/Welcome';

@@ -15,9 +15,9 @@ function Product() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem nisl, gravida eget quam et, convallis venenatis turpis. Aenean bibendum luctus molestie.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem nisl, gravida eget quam et, convallis venenatis turpis. Aenean bibendum luctus molestie.
           </p>
-      </div>
-      <div className='btn'>
-          <a href='_'>View all</a>
+          <div className='btn'>
+            <a href='_'>View all</a>
+        </div>
       </div>
     </div>
   )

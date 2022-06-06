@@ -48,7 +48,7 @@ Phone: ${this.state.phone}`)
             <div className='forms'>
                 <p>Get In Touch</p>
                 <form onSubmit={this.handleSubmit}>
-                    <div className='first-half'>
+                    <div className='first-half-form'>
                         <div>
                             <label>Name</label>
                             <input type='text' value={username} onChange={this.handleUsernameChange} />
@@ -62,7 +62,7 @@ Phone: ${this.state.phone}`)
                             <input type='tel' pattern="[0-9]{3}[0-9]{4}[0-9]{3}" value={phone} onChange={this.handlephoneChange} />
                         </div>
                     </div>
-                    <div className='second-half'>
+                    <div className='second-half-form'>
                         <div>
                             <label>Message</label>
                             <textarea value={comments} placeholder='write your message here..' onChange={this.handleCommentsChange} />

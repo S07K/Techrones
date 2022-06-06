@@ -1,6 +1,6 @@
-// import { textAlign } from '@mui/system';
 import React, { Component } from 'react';
 import  { Link } from 'react-router-dom';
+import './SignIn.css';
 
 export default class SignIn extends Component {
     constructor(props) {
